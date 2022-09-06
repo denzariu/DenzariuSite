@@ -1,0 +1,3 @@
+C:\Users\Denzo\Documents\Visual Studio 2022\Projects\DenzariuSite\DenzariuSite\obj\Debug\DenzariuSite.njsproj.AssemblyReference.cache
+C:\Users\Denzo\Documents\Visual Studio 2022\Projects\DenzariuSite\DenzariuSite\obj\Debug\DenzariuSite.njsproj.CoreCompileInputs.cache
+C:\Users\Denzo\Documents\Visual Studio 2022\Projects\DenzariuSite\DenzariuSite\bin\Microsoft.NodejsTools.WebRole.dll

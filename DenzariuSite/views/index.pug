@@ -1,0 +1,75 @@
+extends layout
+
+block content 
+  div(class="slider")
+    
+    div(class="slider__slides active" id="slide1" style="border: 0px solid #111")
+      div(class="")
+        h1(class="text_shadows")= title
+        div(class="")
+          p(class="line-2" style="font-size: 3.5vw").
+            Hi!
+          p(class="line-2" id="dynamicText").
+          p(class="line-2").
+        div(class="socials revealUp")
+          a(href='https://www.linkedin.com/in/denis-stefan-pinzariu-106b58189/'): img(class="" id='social_fb' alt="LinkedIn" src='images/LinkedIn_128px.png')
+          a(href='https://github.com/denzariu'): img(class="" id='social_git' alt="GitHub" src='images/Git2_128px.png')
+          a(href='mailto:denisstefanpinzariu@gmail.com'): img(class="" id='social_mail' alt="Mail" src='images/Mail_128px.png')
+    
+    div(class="slider__slides" id="slide2" style="border: 0px solid #222")
+      div(class="section-mid-evenly")
+        div(class="")
+          img(class="image-mid" id='project_bmo' alt="BMO" src='images/bmo_anim.gif')
+          p(class="project-title").
+            BMO Vocal Assistant
+        div(class="")
+          p(class="project-description").
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+    div(class="slider__slides" style="border: 0px solid #333") 3
+    div(class="slider__slides" style="border: 0px solid #444") 4
+    div(class="slider__slides" style="border: 0px solid #555") 5
+
+  div(class="footnote_rights")
+    p 2022 Denzariu. All rights reserved
+
+  div(class="slider__bullets" id="click__this")
+    div(class="radio" onclick="prevSlide()")
+      i(class="arrow left")
+        span(class="inner")
+    div(class="bullet_item radio active" onclick="currentSlide(1)")
+      span(class="outer" style="background-color: #71092C")
+        span(class="inner")
+    div(class="bullet_item radio" onclick="currentSlide(2)")
+      span(class="outer" style="background-color: #52b788")
+        span(class="inner")
+    div(class="bullet_item radio" onclick="currentSlide(3)")
+      span(class="outer" style="background-color: #3B79A0")
+        span(class="inner")
+    div(class="bullet_item radio" onclick="currentSlide(4)")
+      span(class="outer" style="background-color: #692D94")
+        span(class="inner")
+    
+    div(class="radio card" onclick="nextSlide()")
+      span(class="infoicon")
+        i(class="arrow right")
+      h1(class="title").
+        &nbsp;&nbsp;Projects
+
+    //-
+      div(class="radio" onclick="nextSlide()")
+        i(class="arrow right")
+          span(class="inner")
+
+  script(type="text/javascript" src="./javascripts/client.js")
+  
+
+
+     
+    
+
+  
+  
