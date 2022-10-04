@@ -189,21 +189,21 @@ function addNewText() {
 // SLIDES //
 
 function prevSlide() {
-    if (slideIndex > 1 && notBlocked) {
+    if (notBlocked && slideIndex > 1) {
         notBlocked = false;
         showSlides(slideIndex - 1);
     }
 }
 
 function nextSlide() {
-    if (slideIndex < 4 && notBlocked) {
+    if (notBlocked && slideIndex < 4) {
         notBlocked = false;
         showSlides(slideIndex + 1);
     }
 }
 
 function currentSlide(n) {
-    if (n != slideIndex && notBlocked) {
+    if (notBlocked && n != slideIndex) {
         notBlocked = false;
         showSlides(n); 
     }
@@ -214,6 +214,9 @@ function showSlides(_n) {
     
     console.log(slideIndex);
     var slides = document.getElementsByClassName("slider__slides");
+
+    slides[slideIndex - 1].animate(moveUp, slideRLTiming);
+
     var dots = document.getElementsByClassName("bullet_item");
     var outer = document.getElementsByClassName("outer");
 
@@ -234,11 +237,11 @@ function showSlides(_n) {
     dots[_n - 1].style.transform = "scale(1)";
     dots[_n - 1].style.opacity = 1;
 
-    slides[slideIndex - 1].animate(moveUp, slideRLTiming);
+    
 
     
 
-    setTimeout(changeSlide, slideRLTiming.duration);
+    setTimeout(changeSlide, slideRLTiming.duration - 50);
 
     n = _n;
 }
@@ -251,11 +254,15 @@ function changeSlide() {
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
 
-    slides[n - 1].animate(moveDown, slideRLTiming);
 
     slides[slideIndex - 1].style.display = "none";
-    slides[n - 1].style.display = "block";
+
+    setTimeout(setBlock, 300);
     
+    
+    
+    
+    setTimeout(unBlock, slideRLTiming.duration);
 
     // Change lines' color and move them
     var hlines = document.getElementsByClassName("retrobg-hline");
@@ -286,12 +293,19 @@ function changeSlide() {
 
 
     slideIndex = n;
-    notBlocked = true;
     console.log(notBlocked);
 }
 
+function setBlock() {
+    var slides = document.getElementsByClassName("slider__slides");
+    slides[n - 1].animate(moveDown, slideRLTiming);
+    slides[n - 1].style.display = "block";
+}
 
+function unBlock() {
 
+    notBlocked = true;
+}
 // Move animation
 /*
 var id = null;
