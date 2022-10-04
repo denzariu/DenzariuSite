@@ -1,7 +1,12 @@
 var slideIndex = 1;
 var n = 1;
-const bulletColors = ['#71092C', '#52b788', '#3B79A0', '#692D94']
+const bulletColors = ["#71092C", "#52b788", "#3B79A0", "#692D94"]
 var notBlocked = true;
+
+const lineColor = '#460e56';
+var newLineColor = '#460e56';
+
+
 
 
 const slideRL = [
@@ -89,9 +94,13 @@ const moveDown = [
 
 const slideRLTiming = {
     duration: 300,
-    iterations: 1,
+    iterations: 1
 }
 
+const colorFadeTiming = {
+    duration: 2400,
+    iterations: 1
+}
 
 // AT BOOT //
 var txt = " I am Denzariu";
@@ -193,16 +202,10 @@ function nextSlide() {
     }
 }
 
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
 function currentSlide(n) {
     if (n != slideIndex && notBlocked) {
         notBlocked = false;
-        showSlides(n);
-        
+        showSlides(n); 
     }
 }
 
@@ -233,6 +236,8 @@ function showSlides(_n) {
 
     slides[slideIndex - 1].animate(moveUp, slideRLTiming);
 
+    
+
     setTimeout(changeSlide, slideRLTiming.duration);
 
     n = _n;
@@ -251,6 +256,34 @@ function changeSlide() {
     slides[slideIndex - 1].style.display = "none";
     slides[n - 1].style.display = "block";
     
+
+    // Change lines' color and move them
+    var hlines = document.getElementsByClassName("retrobg-hline");
+    var vlines = document.getElementsByClassName("retrobg-vline");
+    var retrolines = document.getElementById("retrobg-lines");
+
+    const linesMove = [
+        { transform: 'rotateX(84deg) translateY( 0 )' },
+        { transform: 'rotateX(84deg) translateY( 100px )' },
+        { transform: 'rotateX(84deg) translateY( 200px )' }
+    ];
+
+    retrolines.animate(linesMove, colorFadeTiming);
+
+    newLineColor = bulletColors[n - 1];
+
+    const colorFadeLines = [
+        { backgroundColor: lineColor },
+        { backgroundColor: newLineColor },
+        { backgroundColor: lineColor }
+    ];
+
+
+    for (i = 0; i < hlines.length; i++)
+        hlines[i].animate(colorFadeLines, colorFadeTiming);
+    for (i = 0; i < vlines.length; i++)
+        vlines[i].animate(colorFadeLines, colorFadeTiming);
+
 
     slideIndex = n;
     notBlocked = true;

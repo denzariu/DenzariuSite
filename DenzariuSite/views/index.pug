@@ -1,32 +1,106 @@
 extends layout
 
 block content 
+
+  div(id="retrobg")
+    div(id="retrobg-sky")
+      div(id="retrobh-stars")
+      
+        div(class="retrobg-star" style="left: 35%; top: 15%; transform: scale(3);")
+        div(class="retrobg-star" style="left: 7%; top: 5%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 4%; top: 10%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 33%; top: 16%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 13%; top: 39%; transform: scale(1);")
+        div(class="retrobg-star" style="left: 28%; top: 50%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 42%; top: 17%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 21%; top: 30%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 40%; top: 26%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 8%; top: 9%; transform: scale(1);")
+        div(class="retrobg-star" style="left: 15%; top: 21%; transform: scale(1);")
+        div(class="retrobg-star" style="left: 3%; top: 44%; transform: scale(1);")
+        div(class="retrobg-star" style="left: 21%; top: 19%; transform: scale(1);")
+        div(class="retrobg-star" style="left: 18%; top: 41%; transform: scale(2);")
+        div(class="retrobg-star" style="left: 11%; top: 29%; transform: scale(1);")
+
+        div(class="retrobg-star" style="right: 20%; top: 8%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 10%; top: 21%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 38%; top: 31%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 14%; top: 11%; transform: scale(1);")
+        div(class="retrobg-star" style="right: 27%; top: 17%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 21%; top: 43%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 42%; top: 17%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 21%; top: 30%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 42%; top: 23%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 9%; top: 9%; transform: scale(1);")
+        div(class="retrobg-star" style="right: 12%; top: 22%; transform: scale(1);")
+        div(class="retrobg-star" style="right: 3%; top: 41%; transform: scale(1);")
+        div(class="retrobg-star" style="right: 23%; top: 21%; transform: scale(1);")
+        div(class="retrobg-star" style="right: 18%; top: 45%; transform: scale(2);")
+        div(class="retrobg-star" style="right: 15%; top: 25%; transform: scale(1);")
+      div(id="retrobg-sunWrap")
+        div(id="retrobg-sun")
+      div(id="retrobg-mountains")
+        div(id="retrobg-mountains-left" class="retrobg-mountain")
+        div(id="retrobg-mountains-right" class="retrobg-mountain")
+      div(id="retrobg-cityWrap")
+        div(id="retrobg-city")
+          div(style="left: 4.0%; height: 20%; width: 3.0%;" class="retrobg-building")
+      div(id="retrobg-ground")
+        div(id="retrobg-linesWrap")
+          div(id="retrobg-lines")
+            div(id="retrobg-vlines")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+              div(class="retrobg-vline")
+
+            div(id="retrobg-hlines")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+              div(class="retrobg-hline")
+        div(id="retrobg-groundShadow")
+
+
   div(class="slider")
     
     div(class="slider__slides active" id="slide1" style="border: 0px solid #111")
       div(class="")
         h1(class="text_shadows")= title
-        div(class="")
-          p(class="line-2" style="font-size: 3.5vw").
+        div(class="" style="margin-top: calc(24vh - 10vw);font-weight: bold;")
+          p(class="line-2" style="font-size:calc(3vh - 0.67vw + 2rem);").
             Hi!
-          p(class="line-2" id="dynamicText").
+          p(class="line-2" id="dynamicText" style="font-size:calc(0.4vh - 0.09vw + 1.5rem);").
           p(class="line-2").
         div(class="socials revealUp")
-          a(href='https://www.linkedin.com/in/denis-stefan-pinzariu-106b58189/'): img(class="" id='social_fb' alt="LinkedIn" src='images/LinkedIn_128px.png')
           a(href='https://github.com/denzariu'): img(class="" id='social_git' alt="GitHub" src='images/Git2_128px.png')
+          a(href='https://www.linkedin.com/in/denis-stefan-pinzariu-106b58189/'): img(class="" id='social_fb' alt="LinkedIn" src='images/LinkedIn_128px.png')
           a(href='mailto:denisstefanpinzariu@gmail.com'): img(class="" id='social_mail' alt="Mail" src='images/Mail_128px.png')
     
     div(class="slider__slides" id="slide2" style="border: 0px solid #222")
       div(class="section-mid-evenly")
+        
+        img(class="image-mid" id='project_bmo' alt="BMO" src='images/bmo_anim_comp_lowQ.gif')
+        p(class="project-title").
+          BMO Vocal Assistant
         div(class="")
-          img(class="image-mid" id='project_bmo' alt="BMO" src='images/bmo_anim.gif')
-          p(class="project-title").
-            BMO Vocal Assistant
-        div(class="")
-          p(class="project-description").
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          p(class="project-description")
+            | BMO represents the implementation of an accurate, high-performance, easy-to-use / user-friendly (literally) voice assistant, 
+            | with multiple functionalities which are mainly informative (getting short descriptions of concepts from the Internet, translations, writing and playing notes, 
+            | mathematical operations, details about time and date, weather condition, etc.) and recreational (downloading and playing audio content from the Internet, playing video games, etc.), 
+            | while being able to assist the user through an interaction that emphasizes on user's experience through a minimal need for preconfiguration.
 
 
     div(class="slider__slides" style="border: 0px solid #333") 3
@@ -37,9 +111,15 @@ block content
     p 2022 Denzariu. All rights reserved
 
   div(class="slider__bullets" id="click__this")
-    div(class="radio" onclick="prevSlide()")
-      i(class="arrow left")
-        span(class="inner")
+    div(class="card card-left" onclick="prevSlide()")
+      p(class="title")= leftSlide
+      span(class="infoicon")
+        i(class="arrow left")
+      
+    //-
+      div(class="radio" onclick="prevSlide()")
+        i(class="arrow left")
+          span(class="inner")
     div(class="bullet_item radio active" onclick="currentSlide(1)")
       span(class="outer" style="background-color: #71092C")
         span(class="inner")
@@ -53,11 +133,10 @@ block content
       span(class="outer" style="background-color: #692D94")
         span(class="inner")
     
-    div(class="radio card" onclick="nextSlide()")
+    div(class="card" onclick="nextSlide()")
       span(class="infoicon")
         i(class="arrow right")
-      h1(class="title").
-        &nbsp;&nbsp;Projects
+      p(class="title")= rightSlide
 
     //-
       div(class="radio" onclick="nextSlide()")

@@ -20,7 +20,11 @@ var getData = function () {
 /* GET home page. */
 router.get('/', function (req, res) {
     //res.render('index', { title: dataStruct.title, "data": getData() });
-    res.render('index', { title: dataStruct.title});
+    res.render('index', {
+        title: dataStruct.title,
+        leftSlide: dataStruct.leftSlide,
+        rightSlide: dataStruct.rightSlide
+    });
 });
 
 

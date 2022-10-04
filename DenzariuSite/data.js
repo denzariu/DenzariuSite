@@ -1,3 +1,5 @@
 module.exports = {
-    title: 'Denzariu'
+    title: 'Denzariu',
+    rightSlide: 'Projects \xa0',
+    leftSlide: '\xa0 None'
 }

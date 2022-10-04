@@ -41,6 +41,7 @@
     <Content Include="public\fonts\Broadway.ttf" />
     <Content Include="public\fonts\HUSKYSTA.TTF" />
     <Content Include="public\images\bmo_anim.gif" />
+    <Content Include="public\images\bmo_anim_comp_lowQ.gif" />
     <Content Include="public\images\favicon.ico" />
     <Content Include="public\images\Fb_128px.png" />
     <Content Include="public\images\Git2_128px.png" />
